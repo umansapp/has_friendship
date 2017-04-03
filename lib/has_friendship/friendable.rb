@@ -10,6 +10,10 @@ module HasFriendship
         has_many :friendships, as: :friendable,
                  class_name: "HasFriendship::Friendship", dependent: :destroy
 
+        has_many :relationships,
+                  through: :friendships,
+                  source: :friend
+
         has_many :blocked_friends,
                   -> { where friendships: { status: 3 } },
                   through: :friendships,
