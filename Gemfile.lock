@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     has_friendship (1.0.2)
-      rails (>= 4.0.0, < 5.1.0)
+      rails (>= 4.0.0, < 5.2.0)
       stateful_enum
 
 GEM
